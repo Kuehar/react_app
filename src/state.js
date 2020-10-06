@@ -4,14 +4,24 @@ class Switch extends Component{
     constructor(){
         super();
         this.state = {
-            power:false
+            name:'Taro',
+            data: {
+                height:170,
+                weight:65
+            }
         };
     }
     render(){
         return(
-            <p>
-                { this.state.power ? 'ON' : 'OFF' }
-            </p>
+            <div>
+                <h1>{ this.state.name }</h1>            
+            <dl>
+                <dt>Height</dt>
+                <dd>{this.state.data.height}</dd>
+                <dl>Weight</dl>
+                <dd>{this.state.data.weight}</dd>
+            </dl>
+            </div>
         );
     }
 }
