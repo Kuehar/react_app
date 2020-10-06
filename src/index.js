@@ -1,13 +1,17 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import Button from '@material-ui/core/Button'
+import React, { Component } from 'react';
 
-function App() {
-  return (
-    <Button variant="contained" color="primary">
-      Good job!!
-    </Button>
-  );
+class Hello extends Component {
+  render(){
+    const important = true;
+
+    let paragraph = <p>default</p>;
+
+    if(important){
+      paragraph = <p>important</p>;
+
+      return paragraph; // <p>important</p>
+    }
+  }
 }
 
-ReactDOM.render(<App />, document.querySelector('#app'))
+export default Hello;
